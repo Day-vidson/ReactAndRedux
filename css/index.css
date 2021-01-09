@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(26, 26, 26);
+}
+
+#container {
+    padding: 50px;
+    background-color: rgb(75, 75, 75);
+}
+
+#container h1 {
+    font-size: 144px;
+    font-family: sans-serif;
+    color: #0080A8;
+}

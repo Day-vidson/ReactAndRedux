@@ -1,2 +1,0 @@
-# ReactAndRedux
-React and Redux

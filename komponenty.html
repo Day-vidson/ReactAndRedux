@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/komponenty.css">
+
+    <title>Komponenty</title>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="container1"></div>
+    <div id="container2"></div>
+    <script type="text/babel">
+    // Jest to komponent ponieważ jest rozszerzeniem klasy React.Component, bez tego rozszerzenia powstała by pusta bezużyteczna klasa.
+        // W react'cie: argumenty funkcji = właściwości
+
+        class HelloWorld extends React.Component {
+            render() {
+                // W react'cie właściwości (argumenty fukncji) zapisuje się w nawiasach {}
+                return <p>Witaj, {this.props.greetTarget}!</p>
+            }
+        }
+
+        var destination1 = document.querySelector("#container1");
+        var destination2 = document.querySelector("#container2");
+
+        ReactDOM.render(
+            <div>
+                <HelloWorld greetTarget="Batman"/>
+                <HelloWorld greetTarget="Iron Man"/>
+                <HelloWorld greetTarget="Nicolas Cage"/>
+                <HelloWorld greetTarget="Mega Man"/>
+                <HelloWorld greetTarget="Bono"/>
+                <HelloWorld greetTarget="Catwoman"/>
+            </div>,
+            destination1
+        );
+
+        // Jeśli ponownie użyjemy metody ReactDOM.render() zamieni ona całą poprzednią zawartość elementu na nową! 
+
+        class Buttonify extends React.Component {
+            render() {
+                return(
+                    <div>
+                        <button type={this.props.behavior}>{this.props.children}</button>    
+                    </div>
+                );
+            }
+        }
+
+        ReactDOM.render(
+            <div>
+                <Buttonify behavior="submit">WYŚLIJ DANE</Buttonify>    
+            </div>,
+            destination2
+        );
+    </script>
+</body>
+</html>
