@@ -41,6 +41,7 @@ class Colorizer extends React.Component {
 
                 <form onSubmit={this.setNewColor}>
                     <input onChange={this.colorValue}
+                    // ta linijka tworzy referencję do obiektu oryginalnego DOM w React DOM
                         ref={
                             function(el) {
                                 self._input = el;

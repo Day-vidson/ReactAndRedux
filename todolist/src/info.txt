@@ -1,0 +1,4 @@
+Po wciśnięciu przycisku "dodaj", w "TodoList.state.items" zostaje dodany nowy wpis do array'a "items".
+"TodoItems" dziedziczy właściwość "items" (array), jako "entries". 
+Następnie "TodoItems.createTasks" dla każdego "entry" w "entries" tworzy el. <li> i dodaje go do listy "listItems",
+ która na końcu zostaje zwrócona do "TodoList'a", który renderuje wszystkie el. (<ul> i <li>) w index.js
