@@ -26,7 +26,7 @@ function removeColor(value) {
 function favoriteColors(state, action) {
     // jeśli stan nie jest określony (np. przy pierwszym wywołaniu funkcji definiujemy go jako pustą tablicę)
     if (state === undefined) {
-        state = [];
+        state = ["niebieski"];
     }
 
     if (action.type === "ADD") {
